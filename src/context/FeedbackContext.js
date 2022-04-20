@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from 'react';
+
 const FeedbackContext = createContext();
 
 export const FeedbackProvider = ({ children }) => {
@@ -8,7 +9,6 @@ export const FeedbackProvider = ({ children }) => {
 		item: {},
 		edit: false,
 	});
-
 	useEffect(() => {
 		fetchFeedback();
 	}, []);
@@ -36,7 +36,6 @@ export const FeedbackProvider = ({ children }) => {
 			},
 			body: JSON.stringify(newFeedback),
 		});
-
 		const data = await response.json();
 		setFeedback([data, ...feedback]);
 	};
