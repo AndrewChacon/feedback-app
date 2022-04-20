@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import RatingSelect from './RatingSelect';
 import Button from './shared/Button';
 import Card from './shared/Card';
-import { useContext, useEffect } from 'react';
 import FeedbackContext from '../context/FeedbackContext';
 
 function FeedbackForm() {
